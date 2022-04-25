@@ -2,7 +2,7 @@ id_card_reader
 =============
 Python driver for DESKO IDenty chrom  
 link <https://www.desko.com/site/assets/files/2782/desko_identy-chrom.pdf>  
-Script was develop for  REST API to help quick create customer 
+Script was develop for  REST API to help load customer data 
 
 Script extract user data from passport or ID
 
@@ -14,8 +14,8 @@ run script
 > python example.py
 
 
-Or in your code import idcardreader.py 
-> from idcardreader import get_user_data 
+Or in your code import idcardreader.py   
+> from idcardreader import get_user_data   
 > customer_data, error_code = get_user_data()  
 
 If reader get error (you move quick with ID or data are not readable, ...) script return error_code different than 0  

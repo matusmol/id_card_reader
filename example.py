@@ -1,4 +1,4 @@
-from idcardreader import get_user_data
+from src.idcardreader_package.idcardreader import get_user_data
 
 if __name__ == '__main__':
     customer_data, error_code = get_user_data()

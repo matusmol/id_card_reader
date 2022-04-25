@@ -39,19 +39,14 @@ def get_raw_data():
                 device_name = str("{0.vendor_name} {0.product_name}" \
                                   "(vID=0x{1:04x}, pID=0x{2:04x})" \
                                   "".format(devices, devices.vendor_id, devices.product_id))
-                print("{} device_name {}".format(index, device_name))
 
                 if ocr_reader in device_name:
                     device = all_hids[index]
-                    print("device {} ".format(device))
-
                     try:
                         device.set_raw_data_handler(sample_handler)
                         device.open()
                         global GLOBAL
                         while device.is_plugged():
-                            print("GLOBAL {} ".format(GLOBAL))
-
                             exit_counter += 1
                             sleep(0.5)
                             if GLOBAL or exit_counter == 30:
